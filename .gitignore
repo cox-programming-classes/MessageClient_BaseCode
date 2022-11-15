@@ -1,0 +1,11 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+
+*/.idea/*
+.idea/*
+.idea
+.idea/.idea.MessageClient_BaseCode/.idea/encodings.xml
+.idea/.idea.MessageClient_BaseCode/.idea/encodings.xml
