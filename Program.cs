@@ -13,6 +13,9 @@ using static MessageClient_BaseCode.ApiInterface;
 
 // Frist thing we must do is login.
 // If you have not created an account, then you need to do that.
+// once you have registered an account, you can delete this first if statement and just do the Login step every time.
+// it's bad practice in general, but you could even hard code in your username and passcode so you don't have to type
+// them every time you start the program.
 Console.Write("Register a new account? [y/N] ");
 
 // short hand way to check if a person typed a "yes" word.  (all you have to do is type 'y')
