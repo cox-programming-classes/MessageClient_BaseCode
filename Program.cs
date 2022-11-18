@@ -42,7 +42,9 @@ else
     var userName = Console.ReadLine()!;
     // again, this password is going to be sent in plain-text.  Don't use a real password.
     Console.Write("Passcode:  ");
+    Console.ForegroundColor = Console.BackgroundColor;
     var pwd = Console.ReadLine()!;
+    Console.ResetColor();
 
     // Call the API auth endpoint and get a login token back.
     // this is stored in the variable AuthResponse
