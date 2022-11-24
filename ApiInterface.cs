@@ -107,7 +107,7 @@ public static class ApiInterface
     {
         HttpRequestMessage request = new HttpRequestMessage(method, endpoint);
         if (jsonContent is not null)
-            request.Content = new StringContent(jsonContent, Encoding.UTF32, "application/json");
+            request.Content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
         HttpResponseMessage response = HttpClient.SendAsync(request).Result;
 
@@ -133,7 +133,7 @@ public static class ApiInterface
         
         // if there is data to add to the request, then insert it here.  This expects JSON text format.
         if (jsonContent is not null)
-            request.Content = new StringContent(jsonContent, Encoding.UTF32, "application/json");
+            request.Content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
         // Send the request and wait for the server to respond.  This is a blocking statement and will take 
         // as long as it takes to get the response.

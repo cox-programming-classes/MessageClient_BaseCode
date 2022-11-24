@@ -85,7 +85,7 @@ while (choice != "quit")
         // convert the message to raw data before you send it.
         // because a message contains raw data, there's nothing that says you MUST send text!
         // you could just as easily send any other kind of data, files, or even complex objects.
-        var messageData = Encoding.UTF32.GetBytes(messageText);
+        var messageData = Encoding.UTF8.GetBytes(messageText);
 
         // Call the API Endpoint that sends the message to all the people you indicated.
         // if you didn't provide enough information, then the request will fail and it will
@@ -107,7 +107,7 @@ while (choice != "quit")
 
             // right now this is assuming that the message is plain text.  If the message contained data other than
             // plain text, this is going to display nonsense because it is Decoding the raw binary data as UTF32 text.
-            var messageText = Encoding.UTF32.GetString(message.message);
+            var messageText = Encoding.UTF8.GetString(message.message);
             Console.WriteLine(messageText);
             Console.WriteLine("____________________________________________________________");
         }
